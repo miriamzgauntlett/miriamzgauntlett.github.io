@@ -99,7 +99,7 @@ html {
 body {
   max-width:800px;
   margin:25px auto;
-  color:#cab1da
+  color:#cab1da;
 }
 header, #content, footer { 
   background: rgba(0,0,0,.8); 

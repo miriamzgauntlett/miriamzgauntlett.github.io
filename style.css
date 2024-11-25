@@ -14,6 +14,7 @@ body {
   color: #3A004C;
 }
 
+
 /**
  * Links
  */
@@ -106,6 +107,13 @@ header, #content, footer {
   background:rgba(241,199,255,0.8); 
   padding:25px;
   color:#25112B; 
+}
+
+figcaption {
+  color: white;
+  font-size: 0.5em;
+  padding: 1px;
+  text-align: center;
 }
 
 /* Menu Links */

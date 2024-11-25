@@ -103,15 +103,9 @@ body {
   max-width:800px;
   margin:25px auto;
 }
-header, #content { 
+header, #content, footer { 
   background:rgba(241,199,255,0.8); 
   padding:25px;
-  color:#25112B; 
-}
-
-footer { 
-  background:rgba(241,199,255,0.8); 
-  padding:0px;
   color:#25112B; 
 }
 

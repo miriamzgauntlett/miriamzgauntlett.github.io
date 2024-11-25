@@ -11,7 +11,7 @@ body {
   line-height: 1.6;
   font-weight: normal;
   font-family: "Roboto", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #320F3D;
+  color: #3A004C;
 }
 
 /**
@@ -103,7 +103,7 @@ body {
   margin:25px auto;
 }
 header, #content, footer { 
-  background:rgba(240,194,255,0.8); 
+  background:rgba(241,199,255,0.8); 
   padding:25px;
   color:#25112B; 
 }

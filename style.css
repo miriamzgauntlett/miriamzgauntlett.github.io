@@ -40,7 +40,7 @@ body {
 a {
   font-weight: bold;
   text-decoration: none;
-  color: #a77dc2;                /* consistent purple */
+  color: #2e8b57;                /* consistent purple */
   text-underline-offset: 0.12em;
   text-decoration-thickness: 0.08em;
   transition: color 0.2s ease, text-decoration-color 0.2s ease;

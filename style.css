@@ -36,21 +36,26 @@ body {
    Links
    ----------------------------- */
 
+/* Base link styles (applies everywhere: header, footer, content) */
 a {
   font-weight: bold;
   text-decoration: none;
-  color: #a77dc2;
+  color: #a77dc2;                /* consistent purple */
   text-underline-offset: 0.12em;
   text-decoration-thickness: 0.08em;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
 }
-a:focus {
-  outline: 2px solid rgba(58,0,76,0.35);
-  outline-offset: 2px;
-}
+
 a:hover,
-a:focus-visible {
-  color: #000;     /* darker hover for contrast */
+a:focus {
+  color: #3A004C;                /* darker purple on hover/focus */
   text-decoration: underline;
+  text-decoration-color: #3A004C;
+}
+
+a:focus {
+  outline: 2px solid rgba(167,125,194,0.35);
+  outline-offset: 2px;
 }
 
 small {
@@ -149,21 +154,15 @@ ul.main-menu {
   list-style: none;
   gap: .5rem 0;
 }
-
 ul.main-menu li a {
   margin-right: 20px;
   font-size: 2.0rem;
   border-bottom: solid transparent 3px;
-  color: #3A004C;
-  padding-bottom: 2px;
 }
-ul.main-menu li a:hover {
-  color: #000;
-  border-bottom-color: #3A004C;
-}
-ul.main-menu li a.active {
-  color: #000;
-  border-bottom-color: #3A004C;
+
+ul.main-menu li a:hover,
+ul.main-menu li a:focus {
+  border-bottom-color: #a77dc2;  /* underline effect in nav */
 }
 
 /* -----------------------------

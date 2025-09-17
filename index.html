@@ -1,122 +1,140 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
-    <!-- Page setup -->
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Miriam Gauntlett</title>
-    <meta name="description" content="Miriam Gauntlett personal webpage">
-    <meta name="author" content="Miriam Gauntlett">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
-    <link rel="icon" type="image/png" href="favicon.png">
-  
-    <!-- Stylesheets -->
-    <!-- Reset default styles and add support for google fonts -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css" />
-    <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
-   
+    <meta name="description" content="Miriam Gauntlett personal webpage" />
+    <meta name="author" content="Miriam Gauntlett" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <!-- Normalize (ok to keep) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" />
+
+    <!-- Use fast system fonts instead of remote Google Fonts for speed -->
+    <!-- If you really want Roboto later, switch this to https and preconnect; but system fonts are fastest. -->
+
     <!-- Custom styles -->
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" />
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>    
-
-    <!-- Want to add Bootstrap? -->
-    <!-- Visit: https://getbootstrap.com/docs/4.3/getting-started/introduction/ -->
-    
+    <!-- jQuery (keep if script.js needs it), but defer it so it doesn't block rendering -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" defer
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!-- Your script (defer as well) -->
+    <script src="script.js" defer></script>
   </head>
-  
-  <body>
 
-    <header id="header">
-   <!--   <img src="logo.png"> -->
+  <body>
+    <header id="header" class="container">
       <h1>dr miriam gauntlett</h1>
-      
-      <!-- Menu link fragment #id should match a div id. Example: <a href="#home"> links to <div id="home"></div>  -->
-      <ul class="main-menu">
-        <li><a href="#about">about</a></li>
-        <li><a href="#research">research</a></li>
-        <li><a href="#publications">publications</a></li>
-        <li><a href="#elsewhere">elsewhere</a></li>
-      </ul>                 
+      <nav aria-label="Primary">
+        <ul class="main-menu">
+          <li><a href="#about">about</a></li>
+          <li><a href="#research">research</a></li>
+          <li><a href="#publications">publications</a></li>
+          <li><a href="#elsewhere">elsewhere</a></li>
+        </ul>
+      </nav>
     </header>
-   
-    <div id="container">
+
+    <main id="container" class="container">
       <div class="inner">
-        <div id="content"> 
-    
-          <div id="about" class="content-region hide">
-            <center><img src="kandinsky.jpeg" alt="Several Circles by Wassily Kandinsky" style="width:300px;">
-            <h2>about</h2>
+        <div id="content">
+          <!-- ABOUT -->
+          <section id="about" class="content-region hide" aria-labelledby="about-title">
+            <figure class="lead-figure">
+              <img src="kandinsky.jpeg"
+                   alt="“Several Circles” by Wassily Kandinsky"
+                   width="600" height="600"
+                   loading="lazy" decoding="async" />
+            </figure>
+            <h2 id="about-title">about</h2>
             <p>
               I am a postdoctoral researcher in observational seismology at the Australian National University. My research uses seismic imaging to understand the Earth's interior structure—specifically the crust and the upper mantle.
             </p>
-            <p>
-              I live and work on unceded Ngunnawal and Ngambri country.
-            </p>
-            <p>
-              ☭
-            </p>
-          </div>
-          
-          <div id="research" class="content-region hide">
-            <h2>research</h2>
-            <p>
-            <h3>current</h3>
-              Currently, I am working on the WA Array project with Dr Caroline Eakin, a continental-wide array of seismometers aiming to provide unprecedented insights into the structure of Western Australia's crust and mantle. Western Australia is one of the oldest continental regions in the world, with a complex, lengthy geological history. Rigid continental plates record their deformation history in large-scale rock fabric that alters the directional dependence of seismic wave speed: a property known as seismic anisotropy. Current deformation occurring beneath plates within the mantle also contributes to seismic anisotropy. I am using shear-wave splitting to measure seismic anisotropy in the south-western area of Western Australia. Preliminary results emphasise the complexity of the Earth’s interior beneath this region, with our anisotropy results likely reflecting past deformation events fossilised into the lithosphere.    
-            </p>
-            <p>
-              <h3>phd</h3>
-            <p>  My PhD thesis, "The Dynamic Crustal and Mantle Structure Around the Afar Triple Junction", was supervised by Mike Kendall at the University of Oxford and focused on imaging the subsurface structure around the Afar Triple Junction. This complex region is the confluence of the Red Sea rift, the Gulf of Aden and the East African Rift System, collectively known as the Afro-Arabian Rift System (AARS). Continental rifting is part of the cycle of plate tectonics: the Arabian and African plates are actively moving apart from each other, which will perhaps create a new ocean many millions of years into the future. </p>
-             <p>  The formation and progression of continental rifts have been the focus of study for geophysicists, geochemists and geodynamicists alike, aiming to quantify the causes of continental breakup and how/whether it might develop into an ocean basin. The Afro-Arabian Rift System is an ideal location to study the evolution and development of continental rifting, because of the contemporaneous existence of different active rifting stages within the region, from incipient continental breakup to full seafloor spreading.</p>
-             <p>I conducted my investigation into the AARS on three different scales: upper crust, bulk crust and upper mantle. For each scale I used a different seismological technique: local earthquake traveltime tomography, receiver function analysis, and shear-wave splitting.</p>
-              <p>Using shear-wave splitting of the SKS phase to measure seismic anisotropy, I showed that mantle flow is coherent across the three branches of the rift system. Hot material in the asthenosphere upwells from the core-mantle boundary beneath southern Africa, passes through the East African Rift System and reaches the base of the lithosphere beneath the Afar Triple Junction. My seismic anisotropy results demonstrated that mantle flow then bifurcates around the cold, thick lithosphere of the Arabian Plate, preferentially travelling down the thin lithospheric corridors of the Red Sea and Gulf of Aden rifts.</p>  
-              <p>To investigate the bulk crustal properties across northern Afar, I used teleseismic receiver functions to calculate the depth of the crust and the average crustal Vp/Vs ratio. Heterogeneous crust with variable crustal thickness underlies the region, with considerable amounts of partial melt indicated by anomalously high Vp/Vs ratios. By investigating the relationship between crustal thickness and topographic elevation, I estimated that the regional crustal bulk density is elevated compared to the global average. Topography is higher than would be expected due to crustal isostasy alone, implying that dynamic support from the mantle contributes to the topography in the region.</p>
-             <p> On the upper crustal scale, I investigated magmatism in the region—specifically, Nabro volcano in Eritrea following its June 2011 eruption. I used local earthquake traveltime tomography to invert for the the seismic velocity structure (P-wave velocity, Vp; S-wave velocity, Vs; and their ratio, Vp/Vs) beneath Nabro. Key observations were an aseismic region of low Vp, low Vs and high Vp/Vs ratio at depths of 6–10 km b.s.l., interpreted as the primary melt storage region that fed the eruption; a zone of high Vs, low Vp and low Vp/Vs ratio, representing an intrusive complex of fractured rocks partially-saturated with over-pressurised gases.</p>
-             <p> Overall, I found that the crustal structure throughout the region is highly complex and heterogeneous. Despite this, large-scale mantle dynamics underlying the AARS are remarkably simple. Extensional processes in the region have facilitated magmatism throughout the crust and upper mantle, producing volcanic episodes such as Nabro volcano’s June 2011 eruption.</p>
-          </p>
-            <p><h3>masters</h3>
-              During my masters at University College London, I worked with Ana Ferreira on a project that investigated the space-time charcteristics of large-magnitude, deep earthquakes. These mysterious events occur at depths where the ordinary earthquake mechanism of brittle failure should be inhibited, as the pressures and temperatures are too high. In contrast to their shallow counterparts, the space-time characteristics determined for deep earthquakes are often inconsistent, non-unique and poorly constrained. I determined the source parameters of the largest magnitude (Mw > 7.5), deepest (depth > 300 km) earthquakes in the time period 2000–2020, in order to gain an insight into the rupture physics of deep seismicity.
-            </p>
-          </div>
-          
-          <div id="publications" class="content-region hide">
-            <h2>publications</h2>
-            <p>
-              <ul>
-                <li><b>Gauntlett, M.</b>, Eakin, C. M., Bishoyi, N., Zhang, P., O’Donnell, J.-P., Murdie, R., Miller, M. S., Pickle, R., Ebrahimi, R. (in review) Significant anisotropic fabric across Southwestern Australia and the Yilgarn Craton revealed by the new WA Array. Submitted to Geochemistry, Geophysics, Geosystems. 
-                  <br>
-                <li><b>Gauntlett, M.</b>, Eakin, C. M., Bishoyi, N. (2024) <a href="https://dmpbookshop.eruditetechnologies.com.au/product/wa-array-phase-1-southwest-western-australia-geographical-product-n24m.do">Shear-wave splitting across Phase 1 of WA Array.</a> In WA Array Phase 1 – Southwest compiled by RE Murdie: Geological Survey of Western Australia, Report 256 (pp. 111–117).
-                <br>
-                <li><b>Gauntlett, M.</b>, Stephenson, S. N., Kendall, J-M., Ogden, C., Hammond, J. O. S., Hudson, T., Goitom, B., Ogubazghi, G. (2024). <a href="https://doi.org/10.1029/2023GC011314">The dynamic crust of northern Afar and adjacent rift margins: new evidence from receiver function analysis in Eritrea and Ethiopia.</a> Geochemistry, Geophysics, Geosystems, 25(6), e2023GC011314.</li>
-                <br>
-             <li><b>Gauntlett, M.</b>, Hudson, T., Kendall, J.-M., Rawlinson, N., Blundy, J., Lapins, S., Goitom, B., Hammond, J., Oppenheimer, C., and Ogubazghi, G. (2023). <a href="http://doi.org/10.1029/2022JB025742">Seismic tomography of Nabro caldera, Eritrea: Insights into the magmatic and hydrothermal systems of a recently erupted volcano.</a> Journal of Geophysical Research: Solid Earth (p. e2022JB025742).</li>
-              </ul>
-            </p>
-            <p><h2>conferences and workshops</h2></p>
-            <li>Significant anisotropic fabric across Southwestern Australia and the Yilgarn Craton revealed by the new WA Array, poster presentation at European Geosciences Union Annual Meeting, 2024.</li>
-            <li>Channelised mantle flow through the Afar Triple Junction and around the Arabian plate: evidence from seismic anisotropy, oral presentation at Seismological Society of America Annual Meeting, 2023.</li>
-          </div>
-          
-          <div id="elsewhere" class="content-region hide">
-            <h2>elsewhere</h2>
-            <p>
-              I co-write the <a href="https://morningstaronline.co.uk/author/science-and-society">Science & Society</a> column for the UK Morning Star alongside Rox Middleton and Liam Shaw.
-              <br>
-              <br>
-              I share book reviews on <a href="https://www.instagram.com/mzgreads">Instagram</a>. 
-            </p>
-          </div>
+            <p>I live and work on unceded Ngunnawal and Ngambri country.</p>
+            <p>☭</p>
+          </section>
 
+          <!-- RESEARCH -->
+          <section id="research" class="content-region hide" aria-labelledby="research-title">
+            <h2 id="research-title">research</h2>
+
+            <h3>current</h3>
+            <p>
+              Currently, I am working on the WA Array project with Dr Caroline Eakin, a continental-wide array of seismometers aiming to provide unprecedented insights into the structure of Western Australia's crust and mantle. Western Australia is one of the oldest continental regions in the world, with a complex, lengthy geological history. Rigid continental plates record their deformation history in large-scale rock fabric that alters the directional dependence of seismic wave speed: a property known as seismic anisotropy. Current deformation occurring beneath plates within the mantle also contributes to seismic anisotropy. I am using shear-wave splitting to measure seismic anisotropy in the south-western area of Western Australia. Preliminary results emphasise the complexity of the Earth’s interior beneath this region, with our anisotropy results likely reflecting past deformation events fossilised into the lithosphere.
+            </p>
+
+            <h3>phd</h3>
+            <p>
+              My PhD thesis, "The Dynamic Crustal and Mantle Structure Around the Afar Triple Junction", was supervised by Mike Kendall at the University of Oxford and focused on imaging the subsurface structure around the Afar Triple Junction. This complex region is the confluence of the Red Sea rift, the Gulf of Aden and the East African Rift System, collectively known as the Afro-Arabian Rift System (AARS). Continental rifting is part of the cycle of plate tectonics: the Arabian and African plates are actively moving apart from each other, which will perhaps create a new ocean many millions of years into the future.
+            </p>
+            <p>
+              The formation and progression of continental rifts have been the focus of study for geophysicists, geochemists and geodynamicists alike, aiming to quantify the causes of continental breakup and how/whether it might develop into an ocean basin. The Afro-Arabian Rift System is an ideal location to study the evolution and development of continental rifting, because of the contemporaneous existence of different active rifting stages within the region, from incipient continental breakup to full seafloor spreading.
+            </p>
+            <p>
+              I conducted my investigation into the AARS on three different scales: upper crust, bulk crust and upper mantle. For each scale I used a different seismological technique: local earthquake traveltime tomography, receiver function analysis, and shear-wave splitting.
+            </p>
+            <p>
+              Using shear-wave splitting of the SKS phase to measure seismic anisotropy, I showed that mantle flow is coherent across the three branches of the rift system. Hot material in the asthenosphere upwells from the core-mantle boundary beneath southern Africa, passes through the East African Rift System and reaches the base of the lithosphere beneath the Afar Triple Junction. My seismic anisotropy results demonstrated that mantle flow then bifurcates around the cold, thick lithosphere of the Arabian Plate, preferentially travelling down the thin lithospheric corridors of the Red Sea and Gulf of Aden rifts.
+            </p>
+            <p>
+              To investigate the bulk crustal properties across northern Afar, I used teleseismic receiver functions to calculate the depth of the crust and the average crustal Vp/Vs ratio. Heterogeneous crust with variable crustal thickness underlies the region, with considerable amounts of partial melt indicated by anomalously high Vp/Vs ratios. By investigating the relationship between crustal thickness and topographic elevation, I estimated that the regional crustal bulk density is elevated compared to the global average. Topography is higher than would be expected due to crustal isostasy alone, implying that dynamic support from the mantle contributes to the topography in the region.
+            </p>
+            <p>
+              On the upper crustal scale, I investigated magmatism in the region—specifically, Nabro volcano in Eritrea following its June 2011 eruption. I used local earthquake traveltime tomography to invert for the the seismic velocity structure (P-wave velocity, Vp; S-wave velocity, Vs; and their ratio, Vp/Vs) beneath Nabro. Key observations were an aseismic region of low Vp, low Vs and high Vp/Vs ratio at depths of 6–10 km b.s.l., interpreted as the primary melt storage region that fed the eruption; a zone of high Vs, low Vp and low Vp/Vs ratio, representing an intrusive complex of fractured rocks partially-saturated with over-pressurised gases.
+            </p>
+            <p>
+              Overall, I found that the crustal structure throughout the region is highly complex and heterogeneous. Despite this, large-scale mantle dynamics underlying the AARS are remarkably simple. Extensional processes in the region have facilitated magmatism throughout the crust and upper mantle, producing volcanic episodes such as Nabro volcano’s June 2011 eruption.
+            </p>
+
+            <h3>masters</h3>
+            <p>
+              During my masters at University College London, I worked with Ana Ferreira on a project that investigated the space-time charcteristics of large-magnitude, deep earthquakes. These mysterious events occur at depths where the ordinary earthquake mechanism of brittle failure should be inhibited, as the pressures and temperatures are too high. In contrast to their shallow counterparts, the space-time characteristics determined for deep earthquakes are often inconsistent, non-unique and poorly constrained. I determined the source parameters of the largest magnitude (Mw &gt; 7.5), deepest (depth &gt; 300 km) earthquakes in the time period 2000–2020, in order to gain an insight into the rupture physics of deep seismicity.
+            </p>
+          </section>
+
+          <!-- PUBLICATIONS -->
+          <section id="publications" class="content-region hide" aria-labelledby="pubs-title">
+            <h2 id="pubs-title">publications</h2>
+            <ul>
+              <li><b>Gauntlett, M.</b>, Eakin, C. M., Bishoyi, N., Zhang, P., O’Donnell, J.-P., Murdie, R., Miller, M. S., Pickle, R., Ebrahimi, R. (in review) Significant anisotropic fabric across Southwestern Australia and the Yilgarn Craton revealed by the new WA Array. Submitted to Geochemistry, Geophysics, Geosystems.</li>
+              <li><b>Gauntlett, M.</b>, Eakin, C. M., Bishoyi, N. (2024) <a href="https://dmpbookshop.eruditetechnologies.com.au/product/wa-array-phase-1-southwest-western-australia-geographical-product-n24m.do">Shear-wave splitting across Phase 1 of WA Array.</a> In WA Array Phase 1 – Southwest compiled by RE Murdie: Geological Survey of Western Australia, Report 256 (pp. 111–117).</li>
+              <li><b>Gauntlett, M.</b>, Stephenson, S. N., Kendall, J-M., Ogden, C., Hammond, J. O. S., Hudson, T., Goitom, B., Ogubazghi, G. (2024). <a href="https://doi.org/10.1029/2023GC011314">The dynamic crust of northern Afar and adjacent rift margins: new evidence from receiver function analysis in Eritrea and Ethiopia.</a> Geochemistry, Geophysics, Geosystems, 25(6), e2023GC011314.</li>
+              <li><b>Gauntlett, M.</b>, Hudson, T., Kendall, J.-M., Rawlinson, N., Blundy, J., Lapins, S., Goitom, B., Hammond, J., Oppenheimer, C., and Ogubazghi, G. (2023). <a href="http://doi.org/10.1029/2022JB025742">Seismic tomography of Nabro caldera, Eritrea: Insights into the magmatic and hydrothermal systems of a recently erupted volcano.</a> Journal of Geophysical Research: Solid Earth (p. e2022JB025742).</li>
+            </ul>
+
+            <h2>conferences and workshops</h2>
+            <ul>
+              <li>Significant anisotropic fabric across Southwestern Australia and the Yilgarn Craton revealed by the new WA Array, poster presentation at European Geosciences Union Annual Meeting, 2024.</li>
+              <li>Channelised mantle flow through the Afar Triple Junction and around the Arabian plate: evidence from seismic anisotropy, oral presentation at Seismological Society of America Annual Meeting, 2023.</li>
+              <li>The dynamic crust of Eritrea: new evidence from receiver functions, oral presentation at Seismological Society of America Annual Meeting, 2023.</li> 
+              <li>Insights into the magmatic and hydrothermal systems of a recently erupted volcano, poster presentation at British Geological Association meeting, 2022.</li>
+            </ul>
+          </section>
+
+          <!-- ELSEWHERE -->
+          <section id="elsewhere" class="content-region hide" aria-labelledby="elsewhere-title">
+            <h2 id="elsewhere-title">elsewhere</h2>
+            <p>
+              I co-write the <a href="https://morningstaronline.co.uk/author/science-and-society">Science &amp; Society</a> column for the UK Morning Star alongside Rox Middleton and Liam Shaw.
+            </p>
+            <p>I share book reviews on <a href="https://www.instagram.com/mzgreads">Instagram</a>.</p>
+          </section>
         </div>
       </div>
-    </div>
+    </main>
 
-    <footer>  
-      <center><a href="mailto:miriam.gauntlett@anu.edu.au">email me</a> | <a href="https://github.com/zirafa/simple-website-template">website credit</a></center>
+    <footer class="container">
+      <nav aria-label="Footer" class="footer-links">
+        <a href="mailto:miriam.gauntlett@anu.edu.au">email me</a>
+        <span aria-hidden="true">•</span>
+        <a href="https://github.com/zirafa/simple-website-template">website credit</a>
+        <!-- Add “extra pages” here without putting them in the top bar -->
+        <span aria-hidden="true">•</span>
+        <a href="research.html">research (extra)</a>
+      </nav>
+      <small>© Miriam Gauntlett</small>
     </footer>
-    
-    <!-- Load additional JS scripts here -->
-    <script type="text/javascript" src="script.js"></script>
-    
   </body>
 </html>

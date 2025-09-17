@@ -48,9 +48,9 @@ a {
 
 a:hover,
 a:focus {
-  color: #3A004C;                /* darker purple on hover/focus */
+  color: #145c38;                /* darker purple on hover/focus */
   text-decoration: underline;
-  text-decoration-color: #3A004C;
+  text-decoration-color: #145c38;
 }
 
 a:focus {

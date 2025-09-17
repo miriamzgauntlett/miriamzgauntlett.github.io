@@ -40,7 +40,7 @@ body {
 a {
   font-weight: bold;
   text-decoration: none;
-  color: #2e8b57;                /* consistent purple */
+  color: #6a0dad;                /* consistent purple */
   text-underline-offset: 0.12em;
   text-decoration-thickness: 0.08em;
   transition: color 0.2s ease, text-decoration-color 0.2s ease;
@@ -48,7 +48,7 @@ a {
 
 a:hover,
 a:focus {
-  color: #145c38;                /* darker purple on hover/focus */
+  color: #3A004C;                /* darker purple on hover/focus */
   text-decoration: underline;
   text-decoration-color: #145c38;
 }

@@ -121,6 +121,13 @@ img, picture, video, canvas, svg {
   height: auto;
 }
 
+.lead-figure img {
+  max-width: 400px;   /* adjust to whatever looks right */
+  height: auto;       /* keep proportions */
+  margin: 0 auto;     /* center it */
+  display: block;
+}
+
 /* -----------------------------
    Menu (top nav)
    ----------------------------- */

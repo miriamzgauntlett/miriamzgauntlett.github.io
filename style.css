@@ -1,12 +1,3 @@
-/* =========================================================
-   Miriam Gauntlett — Site Styles (full CSS)
-   Goals:
-   - Pale background that covers the whole page
-   - Comfortable reading (larger type, good line-height)
-   - Fast-feeling UI (no heavy fixed bg)
-   - Keep existing structure (.main-menu, #header, #content, footer)
-   ========================================================= */
-
 /* -----------------------------
    Base sizing & typography
    ----------------------------- */
@@ -17,37 +8,19 @@ html {
   height: 100%;
 }
 
-/* Comfortable defaults + system font stack (fast) */
+/* Comfortable defaults + purple background site-wide */
 body {
-  font-size: 1.7em;                 /* ≈17px base (since html=62.5%) */
+  font-size: 1.8em;                 /* ≈18px base */
   line-height: 1.7;
   font-weight: normal;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
                "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #3A004C;
+  color: #25112B;
 
-  /* Layout container sizing */
-  max-width: 800px;
-  margin: 25px auto;
+  background: #f1c7ff;              /* purple background across the whole page */
   min-height: 100%;
-}
-
-/* Page-wide background color (paler for readability) */
-html, body {
-  background-color: #fffdf8;
-}
-
-/* Optional subtle photo overlay:
-   - Place your background.jpg in the repo root
-   - Comment this block out if you want flat color only */
-body::before {
-  content: "";
-  position: fixed;   /* paints once; performant */
-  inset: 0;
-  background: url(background.jpg) center/cover no-repeat;
-  opacity: 0.08;     /* keep subtle (0.05–0.12 works well) */
-  pointer-events: none;
-  z-index: -1;
+  margin: 25px auto;
+  max-width: 800px;                 /* keep content column narrower for readability */
 }
 
 /* -----------------------------
@@ -57,21 +30,20 @@ body::before {
 a {
   font-weight: bold;
   text-decoration: none;
-  color: #a77dc2;
+  color: #3A004C;
   text-underline-offset: 0.12em;
   text-decoration-thickness: 0.08em;
 }
 a:focus {
-  outline: 2px solid rgba(167,125,194,0.35);
+  outline: 2px solid rgba(58,0,76,0.35);
   outline-offset: 2px;
 }
 a:hover,
 a:focus-visible {
-  color: #8f65ab;     /* slight darken for contrast */
+  color: #000;     /* darker hover for contrast */
   text-decoration: underline;
 }
 
-/* Smaller text helper */
 small {
   font-size: 75%;
 }
@@ -84,13 +56,13 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
   margin-top: 0;
   margin-bottom: 1.4rem;
-  font-weight: 400;
+  font-weight: 500;
   text-rendering: optimizeLegibility;
 }
 
-h1 { font-size: 3.8rem; line-height: 1.25; letter-spacing: -.02rem; font-weight: 600; }
-h2 { font-size: 3.2rem; line-height: 1.28; letter-spacing: -.02rem; }
-h3 { font-size: 2.6rem; line-height: 1.30; letter-spacing: -.01rem; }
+h1 { font-size: 3.8rem; line-height: 1.25; }
+h2 { font-size: 3.2rem; line-height: 1.28; }
+h3 { font-size: 2.6rem; line-height: 1.30; }
 h4 { font-size: 2.0rem; line-height: 1.40; }
 h5 { font-size: 1.8rem; line-height: 1.50; }
 h6 { font-size: 1.6rem; line-height: 1.50; }
@@ -118,27 +90,24 @@ blockquote {
   margin: 1.6em 10%;
   padding: .9em 1.2em;
   font-size: 1.9rem;
-  background: rgba(175,192,210,0.06); /* soft tint for legibility */
+  background: rgba(255,255,255,0.2); /* soft white tint for readability */
 }
-blockquote p:last-child {
-  margin-bottom: 0;
-}
+blockquote p:last-child { margin-bottom: 0; }
 
 /* -----------------------------
-   Layout panels
+   Layout sections
    ----------------------------- */
 
-/* Keep your translucent panels for header/content/footer */
+/* remove “bubble panels” — keep content transparent */
 header, #content, footer {
-  background: rgba(241,199,255,0.75); /* softer than 0.8; tweak as you like */
+  background: transparent;
   padding: 25px;
   color: #25112B;
-  border-radius: 8px;                 /* subtle rounding for a calmer feel */
 }
 
 /* Figure captions */
 figcaption {
-  color: #3A004C;
+  color: #25112B;
   font-size: 1em;
   padding: 1px;
   text-align: center;
@@ -169,16 +138,16 @@ ul.main-menu li a {
   margin-right: 20px;
   font-size: 2.0rem;
   border-bottom: solid transparent 3px;
-  color: #a77dc2;
+  color: #3A004C;
   padding-bottom: 2px;
 }
 ul.main-menu li a:hover {
-  color: #8f65ab;
-  border-bottom-color: #a77dc2;
+  color: #000;
+  border-bottom-color: #3A004C;
 }
 ul.main-menu li a.active {
-  color: #3A004C;
-  border-bottom-color: #a77dc2;
+  color: #000;
+  border-bottom-color: #3A004C;
 }
 
 /* -----------------------------
@@ -194,8 +163,8 @@ ul.main-menu li a.active {
 
 footer {
   text-align: center;
-  color: #4a2a55;
-  border: 1px solid rgba(58,0,76,0.06);
+  color: #25112B;
+  border-top: 1px solid rgba(0,0,0,0.1);
 }
 
 /* -----------------------------
@@ -203,8 +172,5 @@ footer {
    ----------------------------- */
 
 @media (min-width: 900px) {
-  /* Give the header a bit more air on large screens */
   header { padding-top: 30px; }
 }
-
-/* End of file */

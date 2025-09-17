@@ -25,7 +25,7 @@ body {
 
 /* Center the about section */
 #about {
-  max-width: 600px;   /* narrower than the main column */
+  max-width: 800px;   /* narrower than the main column */
   margin: 0 auto;     /* center the block itself */
   text-align: center; /* center all text + image inside */
 }
